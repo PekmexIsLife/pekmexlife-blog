@@ -123,6 +123,47 @@ export const articleSchema = defineType({
             },
           ],
         },
+        // FAQ Block — preguntas frecuentes + JSON-LD
+        {
+          name:  "faqBlock",
+          title: "Bloque FAQ",
+          type:  "object",
+          fields: [
+            {
+              name:        "title",
+              type:        "string",
+              title:       "Título del bloque",
+              description: "Default: 'Algo que Lucy siempre responde'",
+            },
+            {
+              name:  "faqs",
+              title: "Preguntas y respuestas",
+              type:  "array",
+              of: [
+                {
+                  type:   "object",
+                  fields: [
+                    {
+                      name:       "question",
+                      type:       "string",
+                      title:      "Pregunta",
+                      validation: (R: any) => R.required(),
+                    },
+                    {
+                      name:       "answer",
+                      type:       "text",
+                      title:      "Respuesta",
+                      validation: (R: any) => R.required(),
+                    },
+                  ],
+                  preview: {
+                    select: { title: "question" },
+                  },
+                },
+              ],
+            },
+          ],
+        },
         // PullQuote — cita destacada
         {
           name: "pullQuote",
