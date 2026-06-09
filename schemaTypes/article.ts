@@ -128,6 +128,7 @@ export const articleSchema = defineType({
           name:  "faqBlock",
           title: "Bloque FAQ",
           type:  "object",
+          icon:  () => "❓",
           fields: [
             {
               name:        "title",
@@ -169,6 +170,7 @@ export const articleSchema = defineType({
           name: "pullQuote",
           title: "Cita destacada",
           type: "object",
+          icon: () => "💬",
           fields: [
             { name: "quote",  type: "text",   title: "Cita" },
             { name: "author", type: "string", title: "Autor (opcional)" },
@@ -179,6 +181,7 @@ export const articleSchema = defineType({
           name: "statNumber",
           title: "Estadística",
           type: "object",
+          icon: () => "📊",
           fields: [
             { name: "number", type: "string", title: "Número o cifra" },
             { name: "label",  type: "text",   title: "Descripción" },
@@ -189,6 +192,7 @@ export const articleSchema = defineType({
           name: "sectionDivider",
           title: "Separador de sección",
           type: "object",
+          icon: () => "➖",
           fields: [],
         },
         // Caja de CTA integrada
@@ -196,6 +200,7 @@ export const articleSchema = defineType({
           name: "ctaBox",
           title: "Caja CTA",
           type: "object",
+          icon: () => "📣",
           fields: [
             { name: "titulo",    type: "string", title: "Título" },
             { name: "texto",     type: "text",   title: "Descripción" },
