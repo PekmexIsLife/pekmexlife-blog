@@ -187,13 +187,21 @@ export const articleSchema = defineType({
             { name: "label",  type: "text",   title: "Descripción" },
           ],
         },
-        // SectionDivider — separador visual sin campos
+        // SectionDivider — separador visual sin campos configurables
         {
           name: "sectionDivider",
           title: "Separador de sección",
           type: "object",
           icon: () => "➖",
-          fields: [],
+          fields: [
+            {
+              name:         "_style",
+              title:        "Estilo",
+              type:         "string",
+              initialValue: "default",
+              hidden:       true,
+            },
+          ],
         },
         // Caja de CTA integrada
         {
