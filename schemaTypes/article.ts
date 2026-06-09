@@ -195,7 +195,7 @@ export const articleSchema = defineType({
           icon: () => "➖",
           fields: [
             {
-              name:         "_style",
+              name:         "style",
               title:        "Estilo",
               type:         "string",
               initialValue: "default",
